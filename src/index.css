@@ -24,11 +24,11 @@ a:hover {
 }
 
 body {
+  display: flex;
+  justify-content: space-between;
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
 }
 
 h1 {
@@ -59,4 +59,11 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  padding-inline-start: 0px;
+  -webkit-padding-start: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

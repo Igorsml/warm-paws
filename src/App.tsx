@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Routes, Router } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Page404 from "./pages/404/Page404";
 import About from "./pages/about/About";
