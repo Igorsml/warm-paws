@@ -1,0 +1,23 @@
+@use "../../variables.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  border-radius: 50%;
+  transition: all 0.2s linear;
+
+  &:hover {
+    box-shadow: 4px 4px 35px 18px rgba(247, 65, 0, 0.35);
+  }
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

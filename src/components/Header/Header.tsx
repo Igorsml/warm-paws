@@ -1,12 +1,13 @@
 import logo from "../../assets/images/logo.jpg";
 import { NavLink } from "react-router-dom";
+import scss from "./Header.module.scss";
 
 const Header = () => {
   return (
-    <header>
-      <img src={logo} alt="logo" />
+    <header className={scss.header}>
+      <img className={scss.logo} src={logo} alt="logo" />
       <nav>
-        <ul>
+        <ul className={scss.navBar}>
           <li>
             <NavLink to="/about">О нас</NavLink>
           </li>
