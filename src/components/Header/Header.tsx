@@ -2,7 +2,7 @@ import logo from "../../assets/images/logo.jpg";
 import { NavLink } from "react-router-dom";
 import scss from "./Header.module.scss";
 
-const Header = () => {
+export const Header = () => {
   return (
     <header className={scss.header}>
       <div className={scss.headerWrapper}>
@@ -27,5 +27,3 @@ const Header = () => {
     </header>
   );
 };
-
-export default Header;

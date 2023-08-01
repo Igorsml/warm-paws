@@ -24,11 +24,7 @@ a:hover {
 }
 
 body {
-  display: flex;
-  justify-content: space-between;
   margin: 0;
-  display: flex;
-  flex-direction: column;
 }
 
 h1 {

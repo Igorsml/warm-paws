@@ -1,4 +1,4 @@
-const GetPet = () => {
+export const GetPet = () => {
   return (
     <div>
       <p>
@@ -10,5 +10,3 @@ const GetPet = () => {
     </div>
   );
 };
-
-export default GetPet;

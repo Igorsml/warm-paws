@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #315b92;
+  color: white;
+  flex-shrink: 0;
+  padding: 2em;
+
+  & a {
+    color: white;
+  }
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,23 +1,23 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import Header from "./components/Header/Header";
-import Page404 from "./pages/404/Page404";
-import About from "./pages/about/About";
-import GetPet from "./pages/getPet/GetPet";
-import Contacts from "./pages/contacts/Contacts";
-import EventsPet from "./pages/eventsPet/EventsPet";
+import { Page404 } from "./pages/Page404/Page404";
+import { About } from "./pages/About/About";
+import { GetPet } from "./pages/GetPet/GetPet";
+import { Contacts } from "./pages/Contacts/Contacts";
+import { EventsPet } from "./pages/EventsPet/EventsPet";
+import { Home } from "./pages/Home/Home";
 
 function App() {
   return (
     <>
-      <Header />
       <Routes>
-        <Route path="/" />
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/get-pet" element={<GetPet />}></Route>
-        <Route path="/contacts" element={<Contacts />}></Route>
-        <Route path="/events" element={<EventsPet />}></Route>
-        <Route path="*" element={<Page404 />}></Route>
+        <Route path="/" element={<Home />}>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/get-pet" element={<GetPet />}></Route>
+          <Route path="/contacts" element={<Contacts />}></Route>
+          <Route path="/events" element={<EventsPet />}></Route>
+          <Route path="*" element={<Page404 />}></Route>
+        </Route>
       </Routes>
     </>
   );

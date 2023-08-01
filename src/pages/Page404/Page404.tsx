@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Page404 = () => {
+export const Page404 = () => {
   return (
     <div>
       <p>
@@ -9,5 +9,3 @@ const Page404 = () => {
     </div>
   );
 };
-
-export default Page404;
