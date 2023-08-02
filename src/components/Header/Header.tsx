@@ -13,7 +13,7 @@ export const Header = () => {
               <NavLink to="/about">О нас</NavLink>
             </li>
             <li>
-              <NavLink to="/slave-master">Стать хозяином</NavLink>
+              <NavLink to="/get-pet">Стать хозяином</NavLink>
             </li>
             <li>
               <NavLink to="/contacts">Контакты</NavLink>
