@@ -1,21 +1,21 @@
-@use "../../variables.scss";
-
 .header {
   display: flex;
   width: 100%;
   margin: 0 auto;
-  background-color: #434343;
 }
 
 .headerWrapper {
   display: flex;
+  background-color: #434343;
+}
+
+.headerBody {
+  display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  width: 80%;
   margin: 0 auto;
   padding: 20px 40px;
-  box-sizing: border-box;
 }
 
 .logo {

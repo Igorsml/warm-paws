@@ -22,12 +22,7 @@
 }
 
 .socialIconLink {
-  cursor: pointer;
-  transition: all $transitionHover;
-
-  &:hover {
-    scale: $scaleSize;
-  }
+  @include scale-item;
 }
 
 .footerBody {

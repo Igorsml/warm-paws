@@ -1,6 +1,19 @@
 $darkgrey: #434343;
 $widthBody: 80%;
 
+// margin & padding
+$marginTop1: 1em;
+
 // hover
 $scaleSize: 1.1;
 $transitionHover: 0.2s linear;
+
+// mixins
+@mixin scale-item {
+  cursor: pointer;
+  transition: all $transitionHover;
+
+  &:hover {
+    scale: $scaleSize;
+  }
+}
