@@ -1,4 +1,4 @@
-import logo from "../../assets/images/logo.jpg";
+import Logo from "../../assets/images/logo.jpg";
 import { NavLink } from "react-router-dom";
 import scss from "./Header.module.scss";
 
@@ -6,24 +6,28 @@ export const Header = () => {
   return (
     <header className={scss.header}>
       <div className={scss.headerWrapper}>
-        <div className={scss.headerBody}>
-          <img className={scss.logo} src={logo} alt="logo" />
-          <nav className={scss.nav}>
-            <ul className={scss.navBar}>
-              <li>
-                <NavLink to="/about">О нас</NavLink>
-              </li>
-              <li>
-                <NavLink to="/get-pet">Стать хозяином</NavLink>
-              </li>
-              <li>
-                <NavLink to="/contacts">Контакты</NavLink>
-              </li>
-              <li>
-                <NavLink to="/events">События</NavLink>
-              </li>
-            </ul>
-          </nav>
+        <div className={scss.layoutMaxWidth}>
+          <div className={scss.headerLayout}>
+            <div className={scss.logoLayout}>
+              <img className={scss.logo} src={Logo} alt="logo" />
+            </div>
+            <nav className={scss.nav}>
+              <ul className={scss.navBar}>
+                <li>
+                  <NavLink to="/about">О нас</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/get-pet">Стать хозяином</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/contacts">Контакты</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/events">События</NavLink>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
     </header>

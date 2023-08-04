@@ -2,6 +2,7 @@ $darkgrey: #434343;
 $widthBody: 80%;
 
 // margin & padding
+
 $marginTop1: 1em;
 
 // hover
@@ -16,4 +17,13 @@ $transitionHover: 0.2s linear;
   &:hover {
     scale: $scaleSize;
   }
+}
+
+@mixin layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 960px;
+  max-width: 100%;
+  margin: 0 auto;
 }

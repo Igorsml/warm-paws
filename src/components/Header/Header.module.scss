@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 .header {
   display: flex;
   width: 100%;
@@ -6,16 +8,22 @@
 
 .headerWrapper {
   display: flex;
+  width: 100%;
   background-color: #434343;
 }
 
-.headerBody {
+.headerLayout {
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   padding: 20px 40px;
+}
+
+.logoLayout {
+  display: flex;
+  flex-grow: 3;
 }
 
 .logo {
@@ -35,5 +43,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 50px;
+  flex-grow: 1;
+}
+
+.layoutMaxWidth {
+  @include layout;
 }

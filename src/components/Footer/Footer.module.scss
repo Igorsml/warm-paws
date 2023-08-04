@@ -1,10 +1,14 @@
 @import "../../variables.scss";
 
+.layoutMaxWidth {
+  @include layout;
+}
+
 .footer {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: $darkgrey;
+
   color: white;
   flex-shrink: 0;
   padding: 2em;
@@ -12,6 +16,11 @@
   & a {
     color: white;
   }
+}
+
+.footerBody {
+  background-color: $darkgrey;
+  width: 100%;
 }
 
 .socialIcons {
@@ -25,6 +34,15 @@
   @include scale-item;
 }
 
-.footerBody {
-  width: $widthBody;
+.logo {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s linear;
+
+  &:hover {
+    box-shadow: 4px 4px 35px 18px rgba(247, 65, 0, 0.35);
+  }
 }
