@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Dosis:wght@300;400;500;700&family=Inter:wght@400;600;700&display=swap');
 
-@import './variables.scss';
-
 :root {
   font-family: 'Dosis', sans-serif;
   line-height: 1.5;
