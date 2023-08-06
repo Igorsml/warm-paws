@@ -21,24 +21,28 @@ export const Footer = () => {
             <NavLink
               className={scss.socialIconLink}
               to="https://vk.com/public211358147"
+              target="_blank"
             >
               <img src={Vk} alt="vk" />
             </NavLink>
             <NavLink
               className={scss.socialIconLink}
               to="https://t.me/tioplyelapki"
+              target="_"
             >
               <img src={Telegram} alt="telegram" />
             </NavLink>
             <NavLink
               className={scss.socialIconLink}
               to="https://instagram.com/tioplyelapki"
+              target="_"
             >
               <img src={Instagram} alt="instagram" />
             </NavLink>
             <NavLink
               className={scss.socialIconLink}
               to="https://www.avito.ru/user/1bbf74c5e66eaf0216620c1c677d6961/profile?id=2430999295"
+              target="_"
             >
               <img src={Avito} alt="avito" />
             </NavLink>

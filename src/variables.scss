@@ -23,7 +23,8 @@ $transitionHover: 0.2s linear;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 960px;
+  flex-direction: column;
+  width: 1260px;
   max-width: 100%;
-  margin: 0 auto;
+  margin: 1em auto;
 }

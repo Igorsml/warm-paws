@@ -4,6 +4,7 @@ import Telegram from "../../assets/icons/telegram.svg";
 import Vk from "../../assets/icons/vk.svg";
 import Instagram from "../../assets/icons/instagram.svg";
 import Whatsapp from "../../assets/icons/whatsapp.svg";
+import { HookForm } from "../../lib/HookForm/HookForm";
 
 export const Contacts = () => {
   return (
@@ -35,6 +36,7 @@ export const Contacts = () => {
           <img src={Whatsapp} alt="whatsapp" />
         </NavLink>
       </div>
+      <HookForm />
     </>
   );
 };

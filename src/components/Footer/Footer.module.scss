@@ -6,12 +6,12 @@
 
 .footer {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 
   color: white;
   flex-shrink: 0;
-  padding: 2em;
+  width: 100%;
 
   & a {
     color: white;
@@ -38,6 +38,7 @@
   display: flex;
   width: 60px;
   height: 60px;
+  margin: 0 0 1em 0;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.2s linear;

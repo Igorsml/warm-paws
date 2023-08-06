@@ -4,26 +4,20 @@
   display: flex;
   width: 100%;
   margin: 0 auto;
-}
-
-.headerWrapper {
-  display: flex;
-  width: 100%;
   background-color: #434343;
 }
 
 .headerLayout {
   display: flex;
-  width: 100%;
+  width: inherit;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 20px 40px;
+  padding: 10px 0;
 }
 
 .logoLayout {
   display: flex;
-  flex-grow: 3;
 }
 
 .logo {
