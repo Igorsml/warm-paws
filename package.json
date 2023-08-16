@@ -20,6 +20,7 @@
     "swiper": "^10.1.0"
   },
   "devDependencies": {
+    "@types/node": "^20.5.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
@@ -31,6 +32,6 @@
     "gh-pages": "^5.0.0",
     "sass": "^1.64.1",
     "typescript": "^5.0.2",
-    "vite": "^4.4.5"
+    "vite": "^4.4.9"
   }
 }

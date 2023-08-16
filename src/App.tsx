@@ -5,6 +5,7 @@ import { GetPet } from "./pages/GetPet/GetPet";
 import { WantHelp } from "./pages/WantHelp/WantHelp";
 import { Contacts } from "./pages/Contacts/Contacts";
 import { EventsPet } from "./pages/EventsPet/EventsPet";
+import { PetsList } from "./pages/PetsList/PetsList";
 import { Home } from "./pages/Home/Home";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/want-help" element={<WantHelp />}></Route>
           <Route path="/contacts" element={<Contacts />}></Route>
           <Route path="/events" element={<EventsPet />}></Route>
+          <Route path="/pets-list" element={<PetsList />}></Route>
           <Route path="*" element={<Page404 />}></Route>
         </Route>
       </Routes>

@@ -4,7 +4,9 @@ import App from "./App";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
+  <BrowserRouter>
     <App />
   </BrowserRouter>
 );
+
+// <BrowserRouter basename={process.env.PUBLIC_URL}>
