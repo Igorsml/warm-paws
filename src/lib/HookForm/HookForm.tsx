@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import "./HookForm.module.scss";
+import "./HookForm.module.classes";
 
 export const HookForm = () => {
   const {

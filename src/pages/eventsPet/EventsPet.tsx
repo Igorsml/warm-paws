@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import scss from "./EventsPet.module.scss";
+import classes from "./EventsPet.module.classes";
 
 export const EventsPet = () => {
   const vkRef = useRef(null);
@@ -10,5 +10,5 @@ export const EventsPet = () => {
     }
   }, [vkRef]);
 
-  return <div className={scss.events} ref={vkRef}></div>;
+  return <div className={classes.events} ref={vkRef}></div>;
 };

@@ -5,8 +5,8 @@ import { GetPet } from "./pages/GetPet/GetPet";
 import { WantHelp } from "./pages/WantHelp/WantHelp";
 import { Contacts } from "./pages/Contacts/Contacts";
 import { EventsPet } from "./pages/EventsPet/EventsPet";
-import { PetsList } from "./pages/PetsList/PetsList";
-import { Home } from "./pages/Home/Home";
+import { PetsList } from "./components/PetsList/PetsList";
+import { Home } from "./components/Home/Home";
 
 function App() {
   return (

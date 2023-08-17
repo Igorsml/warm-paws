@@ -1,17 +1,17 @@
 import { NavLink } from "react-router-dom";
 import Logo from "../../assets/images/logo.jpg";
-import scss from "./Header.module.scss";
+import classes from "./Header.module.classes";
 
 export const Header = () => {
   return (
-    <header className={scss.header}>
-      <div className={scss.layoutMaxWidth}>
-        <div className={scss.headerLayout}>
-          <NavLink to="/" className={scss.logoLayout}>
-            <img className={scss.logo} src={Logo} alt="logo" />
+    <header className={classes.header}>
+      <div className={classes.layoutMaxWidth}>
+        <div className={classes.headerLayout}>
+          <NavLink to="/" className={classes.logoLayout}>
+            <img className={classes.logo} src={Logo} alt="logo" />
           </NavLink>
-          <nav className={scss.nav}>
-            <ul className={scss.navBar}>
+          <nav className={classes.nav}>
+            <ul className={classes.navBar}>
               <li>
                 <NavLink to="/about">О нас</NavLink>
               </li>

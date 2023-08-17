@@ -1,4 +1,4 @@
-import scss from "./About.module.scss";
+import classes from "./About.module.classes";
 import putDomoyImg1 from "./images/put-domoy1.webp";
 import putDomoyImg2 from "./images/put-domoy2.webp";
 import putDomoyImg3 from "./images/put-domoy3.webp";
@@ -10,8 +10,8 @@ export const About = () => {
         Волонтёрский проект
         <strong>«Тëплые Лапки» существует с 2018 года</strong>.
       </h2>
-      <div className={scss.contentBlockBody}>
-        <div className={scss.contentBlock}>
+      <div className={classes.contentBlockBody}>
+        <div className={classes.contentBlock}>
           <p>
             <strong>Наша цель:</strong> помочь нуждающимся. Мы ищем семьи тем
             животным, которые оказались на улице в условиях, угрожающих их
