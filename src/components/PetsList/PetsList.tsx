@@ -1,9 +1,9 @@
-import classes from "./PetsList.module.classes";
+import classes from "./PetsList.module.scss";
 import { PetCard } from "../PetCard/PetCard";
 
 export const PetsList = (props) => {
   return (
-    <div className={classes.booksList}>
+    <div className={classes.petsList}>
       {props.pets.map((pet) => {
         <PetCard
           key={pet.id}

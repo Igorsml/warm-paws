@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import classes from "./Footer.module.classes";
+import classes from "./Footer.module.scss";
 import Logo from "../../assets/images/logo.jpg";
 import Telegram from "../../assets/icons/telegram.svg";
 import Vk from "../../assets/icons/vk.svg";

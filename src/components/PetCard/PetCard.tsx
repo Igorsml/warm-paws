@@ -1,4 +1,4 @@
-import classes from "./PetCard.module.classes";
+import classes from "./PetCard.module.scss";
 import { Link } from "react-router-dom";
 
 export const PetCard = (props) => {

@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import classes from "./Contacts.module.classes";
+import classes from "./Contacts.module.scss";
 import Telegram from "../../assets/icons/telegram.svg";
 import Vk from "../../assets/icons/vk.svg";
 import Instagram from "../../assets/icons/instagram.svg";

@@ -1,4 +1,4 @@
-import classes from "./About.module.classes";
+import classes from "./About.module.scss";
 import putDomoyImg1 from "./images/put-domoy1.webp";
 import putDomoyImg2 from "./images/put-domoy2.webp";
 import putDomoyImg3 from "./images/put-domoy3.webp";

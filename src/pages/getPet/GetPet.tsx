@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import classes from "./GetPet.module.classes";
+import classes from "./GetPet.module.scss";
 
 export const GetPet = () => {
   return (
