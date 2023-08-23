@@ -1,16 +1,12 @@
-import { NavLink, NavLinkProps } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { PropsWithChildren } from "react";
 
-interface Props {
-  title: string;
-  children?: JSX.Element | JSX.Element[];
-}
+type Props = PropsWithChildren<{
+  children: Element;
+}>;
 
-const ExternalNavLink = (props: Props) => {
-  return (
-    <NavLink to="/" {...props} target="_blank" rel="noopener noreferrer">
-      {children}
-    </NavLink>
-  );
-};
-
-export default ExternalNavLink;
+export const ExternalNavLink: React.FC = ({ children: }) => (
+  <NavLink to="/" {...props} target="_blank" rel="noopener noreferrer">
+    {children}
+  </NavLink>
+);
