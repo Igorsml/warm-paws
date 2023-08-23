@@ -1,0 +1,13 @@
+.petImgContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  place-items: center;
+  margin: 0 auto;
+  overflow: hidden;
+  max-height: 280px;
+  margin-bottom: 1em;
+}
+.petImg {
+  background-position: center center;
+}

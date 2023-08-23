@@ -6,7 +6,6 @@ export const SortPets = () => {
 
   return (
     <div>
-      <h2>Sort Pets</h2>
       <div className={classes.SortBody}>
         <div className={classes.Sort}>
           <h3>Сортировать по</h3>
@@ -17,10 +16,6 @@ export const SortPets = () => {
             <option value="age">Пол</option>
           </select>
         </div>
-        <label>
-          <input type="checkbox" checked={checked} onChange={setSchecked} />
-          My Value
-        </label>
       </div>
     </div>
   );

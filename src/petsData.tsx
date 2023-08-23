@@ -11,7 +11,8 @@ export const petsData: Data[] = [
   {
     id: 1,
     name: "Тимми",
-    photoUrl: "https://images.dog.ceo/breeds/mastiff-bull/n02108422_1836.jpg",
+    photoUrl:
+      "https://sun9-5.userapi.com/impg/zAJ9Epv0Dr30lXSnH64fWksFGD21EOrZ8i_wKQ/U023omGehnc.jpg?size=2560x1707&quality=95&sign=ecb7d2ee307e5c667743764254feb5a9&type=album",
     age: 9,
     weight: 10.5,
     male: "кобель",
@@ -20,7 +21,7 @@ export const petsData: Data[] = [
     id: 2,
     name: "Майли",
     photoUrl:
-      "https://sun9-76.userapi.com/impg/s6es41e0hegpZ8IXJm9NMynne_Pan7aSGyROZQ/0HjJKYYnB8w.jpg",
+      "https://sun9-76.userapi.com/impg/1qrzy7a2qKncyuA2UMGLnFqZ4EXfp55IKLbUHg/EEnogoLqd1w.jpg?size=1280x853&quality=95&sign=5e29abcb3593ab32b9badf3f3e994bae&type=album",
     age: 1,
     weight: 10.5,
     male: "сука",
@@ -28,7 +29,8 @@ export const petsData: Data[] = [
   {
     id: 3,
     name: "Мириам",
-    photoUrl: "https://images.dog.ceo/breeds/mastiff-bull/n02108422_1836.jpg",
+    photoUrl:
+      "https://sun9-14.userapi.com/impg/tlSmgD5aPn6jQGKOpPkgjb4pOTJQXk0LkKzwnQ/WPDLgnwAzzk.jpg?size=1440x2160&quality=96&sign=d63da8c9551a1d8be5796a34fc59487f&type=album",
     age: 9,
     weight: 7,
     male: "сука",
@@ -36,7 +38,8 @@ export const petsData: Data[] = [
   {
     id: 4,
     name: "Павлик",
-    photoUrl: "https://images.dog.ceo/breeds/mastiff-bull/n02108422_1836.jpg",
+    photoUrl:
+      "https://sun9-22.userapi.com/impg/IVUOFE2NUTItH2Hm176RTJ5tfRX3fo6ITBxG3Q/E2SADP_tDuk.jpg?size=1620x2160&quality=95&sign=8c4dc21bd576cf1d2e681054665becbd&type=album",
     age: 5,
     weight: 4,
     male: "кобель",
@@ -59,7 +62,7 @@ export const petsData: Data[] = [
   },
   {
     id: 7,
-    name: "2",
+    name: "Гусь",
     photoUrl: "https://images.dog.ceo/breeds/mastiff-bull/n02108422_1836.jpg",
     age: 3,
     weight: 9,
@@ -67,7 +70,7 @@ export const petsData: Data[] = [
   },
   {
     id: 8,
-    name: "2",
+    name: "Посум",
     photoUrl: "https://images.dog.ceo/breeds/mastiff-bull/n02108422_1836.jpg",
     age: 5.5,
     weight: 9,
@@ -75,7 +78,7 @@ export const petsData: Data[] = [
   },
   {
     id: 9,
-    name: "2",
+    name: "Джо",
     photoUrl: "https://images.dog.ceo/breeds/mastiff-bull/n02108422_1836.jpg",
     age: 3,
     weight: 8.3,
