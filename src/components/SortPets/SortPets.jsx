@@ -29,57 +29,60 @@ export const SortPets = () => {
     sortData(sortType);
   }, [sortType]);
 
-  const filteredList = data.filter((item) => item.gender === filterValue);
-
   const handleFilterChange = (e) => setFilterValue(e.target.value);
+
+  const filteredList = data.filter((item) => item.male === filterValue);
 
   return (
     <div>
       <div className={classes.SortBody}>
         <div className={classes.Sort}>
           <h3>Сортировать по</h3>
-          <select onChange={(event) => setSortType(event.target.value)}>
+          <select
+            className={classes.selectDropdown}
+            onChange={(event) => setSortType(event.target.value)}
+          >
             <option value="name">Имя</option>
             <option value="age">Возраст</option>
             <option value="weight">Вес</option>
           </select>
         </div>
-        <label>
-          <input
-            type="radio"
-            name="gender"
-            value=""
-            checked={filterValue === ""}
-            onChange={handleFilterChange}
-          />
-          Любой
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="gender"
-            value="male"
-            checked={filterValue === "кобель"}
-            onChange={handleFilterChange}
-          />
-          Кобель
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="gender"
-            value="female"
-            checked={filterValue === "сука"}
-            onChange={handleFilterChange}
-          />
-          Сука
-        </label>
+        <fieldset>
+          <legend>Пол:</legend>
+          <div className={classes.inputsBody}>
+            <label>
+              <input
+                type="radio"
+                name="gender"
+                value=""
+                checked={filterValue === ""}
+                onChange={handleFilterChange}
+              />
+              Любой
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="gender"
+                value="кобель"
+                checked={filterValue === "кобель"}
+                onChange={handleFilterChange}
+              />
+              Кобель
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="gender"
+                value="сука"
+                checked={filterValue === "сука"}
+                onChange={handleFilterChange}
+              />
+              Сука
+            </label>
+          </div>
+        </fieldset>
 
-        <ul>
-          {filteredList.map((item, index) => (
-            <li key={index}>{item.name}</li>
-          ))}
-        </ul>
         <div className={classes.petsList}>
           {filteredList.map((pet) => {
             return (
