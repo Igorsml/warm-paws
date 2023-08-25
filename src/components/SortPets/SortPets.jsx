@@ -6,7 +6,7 @@ import { petsData } from "../../petsData";
 export const SortPets = () => {
   const [data, setData] = useState([]);
   const [sortType, setSortType] = useState("age");
-  const [filterValue, setFilterValue] = useState(""); // State for the selected filter value
+  const [filterValue, setFilterValue] = useState("");
 
   useEffect(() => {
     const sortData = (type) => {
@@ -20,9 +20,6 @@ export const SortPets = () => {
       const sorted = [...petsData].sort(
         (a, b) => b[sortProperty] - a[sortProperty]
       );
-      // const filtered = [...petsData].filter((elem) => petsData.male === elem);
-
-      // setData(filtered);
       setData(sorted);
     };
 
@@ -37,7 +34,7 @@ export const SortPets = () => {
     <div>
       <div className={classes.SortBody}>
         <div className={classes.Sort}>
-          <h3>Сортировать по</h3>
+          <h3>Сортировать:</h3>
           <select
             className={classes.selectDropdown}
             onChange={(event) => setSortType(event.target.value)}
