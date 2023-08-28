@@ -1,19 +1,27 @@
 import classes from "./SortPets.module.scss";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { PetCard } from "../PetCard/PetCard";
 import { petsData } from "../../petsData";
 
+interface sortData {
+  id: number;
+  name: string;
+  age: number;
+  weight: number;
+  male: string;
+}
+
 export const SortPets = () => {
   const [data, setData] = useState([]);
-  const [sortType, setSortType] = useState("age");
+  const [sortType, setSortType] = useState("");
   const [filterValue, setFilterValue] = useState("");
 
-  useEffect(() => {
-    const sortData = (type) => {
+    const SortData = useCallback((types: sortData) => {
       const types = {
         name: "name",
-        age: "age",
-        weight: "weight",
+        // age: "age",
+        // weight: "weight",
+        // male: "male",
       };
       const sortProperty = types[type];
 
@@ -21,14 +29,18 @@ export const SortPets = () => {
         (a, b) => b[sortProperty] - a[sortProperty]
       );
       setData(sorted);
-    };
+      SortData(sortType);
+    }, [sortType]);
+    });
 
-    sortData(sortType);
-  }, [sortType]);
 
-  const handleFilterChange = (e) => setFilterValue(e.target.value);
 
-  const filteredList = data.filter((item) => item.male === filterValue);
+  const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement>) =>
+    setFilterValue(e.target.value);
+
+  const filteredList = data.filter(
+    (item: sortData) => item.male === filterValue
+  );
 
   return (
     <div>
@@ -61,21 +73,21 @@ export const SortPets = () => {
               <input
                 type="radio"
                 name="gender"
-                value="кобель"
-                checked={filterValue === "кобель"}
+                value="мальчик"
+                checked={filterValue === "мальчик"}
                 onChange={handleFilterChange}
               />
-              Кобель
+              мальчик
             </label>
             <label>
               <input
                 type="radio"
                 name="gender"
-                value="сука"
-                checked={filterValue === "сука"}
+                value="девочка"
+                checked={filterValue === "девочка"}
                 onChange={handleFilterChange}
               />
-              Сука
+              девочка
             </label>
           </div>
         </fieldset>
@@ -85,9 +97,7 @@ export const SortPets = () => {
             return (
               <PetCard
                 key={pet.id}
-                petId={pet.id}
                 petName={pet.name}
-                petImg={pet.photoUrl}
                 petAge={pet.age}
                 petWeight={pet.weight}
                 petMale={pet.male}
@@ -101,9 +111,7 @@ export const SortPets = () => {
           return (
             <PetCard
               key={pet.id}
-              petId={pet.id}
               petName={pet.name}
-              petImg={pet.photoUrl}
               petAge={pet.age}
               petWeight={pet.weight}
               petMale={pet.male}

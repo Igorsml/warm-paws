@@ -8,5 +8,3 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <App />
   </HashRouter>
 );
-
-// <BrowserRouter basename={process.env.PUBLIC_URL}>

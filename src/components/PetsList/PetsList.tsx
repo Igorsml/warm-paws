@@ -8,7 +8,7 @@ export const PetsList = () => {
     <>
       <h1>Список питомцев</h1>
       <SortPets />
-      {/* <div className={classes.petsList}>
+      <div className={classes.petsList}>
         {petsData.map((pet) => {
           return (
             <PetCard
@@ -22,7 +22,7 @@ export const PetsList = () => {
             />
           );
         })}
-      </div> */}
+      </div>
     </>
   );
 };
