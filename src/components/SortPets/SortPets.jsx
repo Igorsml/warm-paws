@@ -33,7 +33,7 @@ export const SortPets = () => {
     }, [sortType]);
     });
 
-
+console.log('fix')
 
   const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setFilterValue(e.target.value);
