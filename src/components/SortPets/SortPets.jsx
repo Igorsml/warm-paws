@@ -1,15 +1,41 @@
 import classes from "./SortPets.module.scss";
-import { useState, useEffect, useCallback } from "react";
+import { useState } from "react";
 
-export const SortPets = () => {
-  const [data, setData] = useState([]);
-  const [sortType, setSortType] = useState("");
-  const [filterValue, setFilterValue] = useState("");
+export const SortPets = ({ value, onChangeSort }) => {
+  const [open, setOpen] = useState(false);
+
+  const list = [
+    { name: "имя", sort: "name" },
+    { name: "вес", sort: "weight" },
+    { name: "возраст", sort: "age" },
+  ];
+
+  const onClickListItem = (i) => {
+    onChangeSort(i);
+    setOpen(false);
+  };
 
   return (
     <div>
-      <button onClick={() => setOrderType("asc")}> ↑ </button>
-      <button onClick={() => setOrderType("desc")}> ↓ </button>
+      <b>Сортировать по:</b>
+      <span onClick={() => setOpen(!open)}>{value.name}</span>
+      {open && (
+        <div className={classes.sort__popup}>
+          <ul>
+            {list.map((obj, i) => (
+              <li
+                key={i}
+                onClick={() => onClickListItem(obj)}
+                className={
+                  value.sortProperty === obj.sortProperty ? "selected" : ""
+                }
+              >
+                {obj.name}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 };

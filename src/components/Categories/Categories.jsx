@@ -1,12 +1,6 @@
 import classes from "./Categories.module.scss";
-import { useState } from "react";
 
-interface CategoriesProps {
-  categories: Array<string>;
-  value: number;
-}
-
-export const Categories = ({ value, onClickCategory }): CategoriesProps => {
+export const Categories = ({ value, onChangeCategory }) => {
   const categories = [
     "Все",
     "Щенки",
@@ -23,7 +17,7 @@ export const Categories = ({ value, onClickCategory }): CategoriesProps => {
           return (
             <li
               key={i}
-              onClick={() => onClickCategory(i)}
+              onClick={() => onChangeCategory(i)}
               className={value === i ? "active" : ""}
             >
               {categoryName}
