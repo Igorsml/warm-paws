@@ -98,8 +98,9 @@ button {
 }
 
 .sort__popup {
+  display: flex;
 }
 
-.selected {
+.active {
   color: #fe5f1e;
 }

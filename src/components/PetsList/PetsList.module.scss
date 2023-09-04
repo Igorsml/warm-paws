@@ -1,3 +1,11 @@
+.petsListSort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 1em 0;
+}
+
 .petsList {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

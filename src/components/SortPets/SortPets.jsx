@@ -27,7 +27,7 @@ export const SortPets = ({ value, onChangeSort }) => {
                 key={i}
                 onClick={() => onClickListItem(obj)}
                 className={
-                  value.sortProperty === obj.sortProperty ? "selected" : ""
+                  value.sortProperty === obj.sortProperty ? "active" : ""
                 }
               >
                 {obj.name}
