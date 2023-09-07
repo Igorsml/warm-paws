@@ -1,5 +1,6 @@
 import classes from "./SortPets.module.scss";
 import { useState } from "react";
+import cn from "classnames";
 
 export const SortPets = ({ value, onChangeSort }) => {
   const [open, setOpen] = useState(false);
@@ -17,24 +18,28 @@ export const SortPets = ({ value, onChangeSort }) => {
 
   return (
     <div>
-      <b>Сортировать по:</b>
-      <span onClick={() => setOpen(!open)}>{value.name}</span>
+      <b>Сортировать по: </b>
+      <span
+        className={classes.sortSelectedValue}
+        onClick={() => setOpen(!open)}
+      >
+        {value.name}
+      </span>
       {open && (
-        <div className={classes.sort__popup}>
-          <ul>
-            {list.map((obj, i) => (
-              <li
-                key={i}
-                onClick={() => onClickListItem(obj)}
-                className={
-                  value.sortProperty === obj.sortProperty ? "active" : ""
-                }
-              >
-                {obj.name}
-              </li>
-            ))}
-          </ul>
-        </div>
+        <ul className={classes.sortList}>
+          {list.map((obj, i) => (
+            <li
+              key={i}
+              onClick={() => onClickListItem(obj)}
+              className={cn(
+                classes.sortListItem +
+                  (value.sortProperty === obj.sortProperty ? "active" : "")
+              )}
+            >
+              {obj.name}
+            </li>
+          ))}
+        </ul>
       )}
     </div>
   );

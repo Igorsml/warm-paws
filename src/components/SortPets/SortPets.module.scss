@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .petsList {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -84,23 +86,39 @@ button {
   width: 35px;
   height: 35px;
   padding: 5px;
-  border: 1px solid #fe5f1e;
+  border: 1px solid $orange;
   border-radius: 30px;
   margin-right: 5px;
   cursor: pointer;
   background-color: white;
-  color: #fe5f1e;
+  color: $orange;
 
   &:hover {
-    background-color: #fe5f1e;
+    background-color: $orange;
     color: white;
   }
 }
 
-.sort__popup {
+.sortList {
   display: flex;
+  flex-direction: column;
+  border: 1px solid $orange;
+  padding: $padding10;
+  border-radius: $borderRadius;
+}
+
+.sortSelectedValue {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: $orange;
+  cursor: pointer;
 }
 
 .active {
-  color: #fe5f1e;
+  color: $orange;
+}
+
+.sortListItem {
+  padding: 10px;
+  cursor: pointer;
 }

@@ -1,10 +1,19 @@
-@import "../../variables.scss";
+@import "../../styles/_variables.scss";
 
 .categoriesList {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 30vw;
+  flex-wrap: wrap;
+  flex-grow: 2;
+  margin-right: 20%;
+}
+
+.categoriesListItem {
+  border: 1px solid $orange;
+  border-radius: $borderRadius;
+  padding: $padding10;
+  @include scale-item;
 }
 
 .active {
