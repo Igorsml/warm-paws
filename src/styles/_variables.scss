@@ -3,6 +3,7 @@ $widthBody: 80%;
 // colors
 $darkgrey: #434343;
 $orange: #fe5f1e;
+$white: #fff;
 
 // margin & padding
 $marginTop1: 1em;
@@ -10,6 +11,9 @@ $marginTop1: 1em;
 // styles
 $borderRadius: 5px;
 $padding10: 10px;
+
+// font size
+$mobileMenuLinks: 2rem;
 
 // hover
 $scaleSize: 1.1;
@@ -33,4 +37,8 @@ $transitionHover: 0.2s linear;
   width: 1260px;
   max-width: 100%;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
 }

@@ -16,7 +16,6 @@ export const HookForm = () => {
     reset();
   };
 
-  console.log("render:");
   console.log(isValid);
 
   return (
