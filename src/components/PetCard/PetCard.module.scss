@@ -1,3 +1,9 @@
+.petsList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
 .petImgContainer {
   display: flex;
   align-items: center;
@@ -9,7 +15,8 @@
 }
 
 .petImg {
-  background-position: center center;
-  width: 30%;
-  border-radius: 60%;
+  width: 200px;
+  max-width: 100%;
+  border-radius: 1rem;
+  overflow-clip-margin: content-box 5px;
 }

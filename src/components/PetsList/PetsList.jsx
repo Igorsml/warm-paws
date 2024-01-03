@@ -1,50 +1,33 @@
-import { useState, useEffect } from "react";
-import { Categories } from "../Categories/Categories";
+import { useLocalStorage } from "../../hooks/UseLocalStorage";
 import { PetCard } from "../PetCard/PetCard";
-import { SortPets } from "../SortPets/SortPets";
+import { usePets } from "../../contexts/PetsContext";
 import classes from "./PetsList.module.scss";
-import "react-loading-skeleton/dist/skeleton.css";
-
-const mockData = "https://64ed8ea61f872182714160f3.mockapi.io/pets/pets";
 
 export const PetsList = () => {
-  const [items, setItems] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [categoryId, setCategoryId] = useState(0);
-  const [sortType, setSortType] = useState({
-    name: "Имя",
-    sortProperty: "name",
-  });
-  const [orderType, setOrderType] = useState("asc");
-  // &order=${orderType}
+  const key = "orders";
 
-  useEffect(() => {
-    setIsLoading(true);
-    fetch(`${mockData}`).then((response) => {
-      response.json().then((data) => {
-        setTimeout(() => {
-          setItems(data);
-          setIsLoading(false);
-        });
-      }, 1000);
-    });
-    window.scrollTo(0, 0);
-  }, [categoryId]);
+  const { pets } = usePets();
+  const [order, setOrder] = useLocalStorage([], key);
+
+  const value = `${order.map((item) => item.name)}`;
+
+  const addToOrder = (id) => {
+    const newItem = pets.find((item) => item.id === id);
+
+    setOrder([...order, newItem]);
+  };
+
+  const handleClear = () => {
+    setOrder([]);
+  };
 
   return (
     <>
-      <div className={classes.petsListSort}>
-        <Categories
-          value={categoryId}
-          onChangeCategory={(id) => setCategoryId(id)}
-        />
-        <SortPets value={sortType} onChangeSort={(i) => setSortType(i)} />
-      </div>
-      <div className={classes.petsList}>
-        {items.map((obj) => (
-          <PetCard key={obj.id} data={obj} isLoading={isLoading} />
-        ))}
-      </div>
+      {value && (
+        <div style={{ display: "flex" }}>Ваш заказ в добрые руки: {value}</div>
+      )}
+      {value && <button onClick={handleClear}>Очистить заказ</button>}
+      <PetCard addToOrder={addToOrder} order={order} />
     </>
   );
 };

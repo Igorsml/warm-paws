@@ -19,7 +19,7 @@ export const Header = () => {
             <NavLink to="/" className={classes.logoLayout}>
               <img className={classes.logo} src={Logo} alt="logo" />
             </NavLink>
-            <Nav isMenuOpen={isMenuOpen} />
+            <Nav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
           </div>
         </div>
         <button onClick={handleBurger} className={classes.headerBurgerButton}>
