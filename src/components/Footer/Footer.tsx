@@ -15,7 +15,7 @@ export const Footer = () => {
         <footer className={classes.footer}>
           <div>
             <img className={classes.logo} src={Logo} alt="logo" />
-            <p>© 2008 — {currentYear} «Тёплые лапки»</p>
+            <p>© 2018 — {currentYear} «Тёплые лапки»</p>
           </div>
           <div className={classes.socialIcons}>
             <NavLink
