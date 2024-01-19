@@ -21,10 +21,10 @@ const PetsProvider = ({ children }: PetsProviderProps) => {
 
   useEffect(() => {
     GetPets()
-      .then((fetchedPets) => {
+      .then((fetchedPets: Pet[]) => {
         setPets(fetchedPets);
       })
-      .catch((error) => {
+      .catch((error: Error) => {
         console.error("Error fetching pets:", error);
       });
   }, []);
