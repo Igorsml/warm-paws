@@ -4,9 +4,10 @@ import {
   useState,
   useMemo,
   useCallback,
+  useEffect,
 } from "react";
 import { Pet, PetsContextType, PetsProviderProps } from "../types/PetTypes";
-import { petsList } from "./petsList";
+import { GetPets } from "../services/GetPets";
 
 const PetsContext = createContext<PetsContextType>({
   pets: [],
@@ -16,7 +17,17 @@ const PetsContext = createContext<PetsContextType>({
 });
 
 const PetsProvider = ({ children }: PetsProviderProps) => {
-  const [pets, setPets] = useState(petsList);
+  const [pets, setPets] = useState<Pet[]>([]);
+
+  useEffect(() => {
+    GetPets()
+      .then((fetchedPets) => {
+        setPets(fetchedPets);
+      })
+      .catch((error) => {
+        console.error("Error fetching pets:", error);
+      });
+  }, []);
 
   const addPet = useCallback(
     (pet: Pet) => {
