@@ -18,6 +18,7 @@ const PetsContext = createContext<PetsContextType>({
 
 const PetsProvider = ({ children }: PetsProviderProps) => {
   const [pets, setPets] = useState<Pet[]>([]);
+  // хочу так const [pets, setPets] = useState<Pet[]>(() => GetPets());
 
   useEffect(() => {
     GetPets()
