@@ -2,6 +2,7 @@ type Pet = {
   id: number;
   name: string;
   age?: number;
+  setPets?: object;
 };
 
 type PetsContextType = {

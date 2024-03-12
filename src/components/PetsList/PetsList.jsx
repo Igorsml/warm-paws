@@ -1,12 +1,12 @@
 import { useLocalStorage } from "../../hooks/UseLocalStorage";
 import { PetCard } from "../PetCard/PetCard";
-import { usePets } from "../../contexts/PetsContext";
+import { usePetsContext } from "../../contexts/PetsContext";
 import classes from "./PetsList.module.scss";
 
 export const PetsList = () => {
   const key = "orders";
 
-  const { pets } = usePets();
+  const { pets } = usePetsContext();
   const [order, setOrder] = useLocalStorage([], key);
 
   const value = `${order.map((item) => item.name)}`;
@@ -23,9 +23,7 @@ export const PetsList = () => {
 
   return (
     <>
-      {value && (
-        <div style={{ display: "flex" }}>Ваш заказ в добрые руки: {value}</div>
-      )}
+      {value && <div style={{ display: "flex" }}>Ваш заказ в добрые руки: {value}</div>}
       {value && <button onClick={handleClear}>Очистить заказ</button>}
       <PetCard addToOrder={addToOrder} order={order} />
     </>

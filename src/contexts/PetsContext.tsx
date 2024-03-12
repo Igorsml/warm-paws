@@ -1,13 +1,6 @@
-import {
-  createContext,
-  useContext,
-  useState,
-  useMemo,
-  useCallback,
-  useEffect,
-} from "react";
+import { createContext, useContext, useState, useMemo, useCallback, useEffect } from "react";
 import { Pet, PetsContextType, PetsProviderProps } from "../types/PetTypes";
-import { GetPets } from "../services/GetPets";
+import { UsePets } from "../hooks/UsePets";
 
 const PetsContext = createContext<PetsContextType>({
   pets: [],
@@ -17,22 +10,11 @@ const PetsContext = createContext<PetsContextType>({
 });
 
 const PetsProvider = ({ children }: PetsProviderProps) => {
-  const [pets, setPets] = useState<Pet[]>([]);
-  // хочу так const [pets, setPets] = useState<Pet[]>(() => GetPets());
-
-  useEffect(() => {
-    GetPets()
-      .then((fetchedPets: Pet[]) => {
-        setPets(fetchedPets);
-      })
-      .catch((error: Error) => {
-        console.error("Error fetching pets:", error);
-      });
-  }, []);
+  const [pets, setPets] = UsePets();
 
   const addPet = useCallback(
     (pet: Pet) => {
-      setPets([...pets, pet]);
+      setPets([...[pets], pet]);
     },
     [pets]
   );
@@ -46,9 +28,7 @@ const PetsProvider = ({ children }: PetsProviderProps) => {
 
   const updatePet = useCallback(
     (id: number, newPet: Partial<Pet>) => {
-      setPets(
-        pets.map((pet: Pet) => (pet.id === id ? { ...pet, ...newPet } : pet))
-      );
+      setPets(pets.map((pet: Pet) => (pet.id === id ? { ...pet, ...newPet } : pet)));
     },
     [pets]
   );
@@ -63,11 +43,9 @@ const PetsProvider = ({ children }: PetsProviderProps) => {
     [pets, addPet, removePet, updatePet]
   );
 
-  return (
-    <PetsContext.Provider value={contextValue}>{children}</PetsContext.Provider>
-  );
+  return <PetsContext.Provider value={contextValue}>{children}</PetsContext.Provider>;
 };
 
-const usePets = () => useContext(PetsContext);
+const usePetsContext = () => useContext(PetsContext);
 
-export { PetsProvider, usePets };
+export { PetsProvider, usePetsContext };

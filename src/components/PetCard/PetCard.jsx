@@ -1,8 +1,8 @@
-import { usePets } from "../../contexts/PetsContext";
+import { usePetsContext } from "../../contexts/PetsContext";
 import classes from "./PetCard.module.scss";
 
 export const PetCard = (props) => {
-  const { pets } = usePets();
+  const { pets } = usePetsContext();
 
   return (
     <>
@@ -14,9 +14,7 @@ export const PetCard = (props) => {
             <p>Возраст (месяцев): {pet.age}</p>
             <p>Пол: {pet.gender}</p>
 
-            {props.order.every((petOrder) => petOrder.id !== pet.id) && (
-              <button onClick={() => props.addToOrder(pet.id)}>Приютить</button>
-            )}
+            {props.order.every((petOrder) => petOrder.id !== pet.id) && <button onClick={() => props.addToOrder(pet.id)}>Приютить</button>}
           </li>
         ))}
       </ul>
